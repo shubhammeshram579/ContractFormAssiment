@@ -23,13 +23,16 @@ const ContractForm = () => {
 
   useEffect(() => {
     // Fetch countries on component mount
+    const fatchCondries = () => {
     axios
       .get("https://countriesnow.space/api/v0.1/countries")
       .then((response) => {
         setCountries(response.data.data);
       })
       .catch((error) => console.error("Error fetching countries:", error));
-  }, []);
+    }
+    fatchCondries();
+  }, [countries]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
