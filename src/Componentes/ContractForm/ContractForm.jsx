@@ -121,7 +121,7 @@ const ContractForm = () => {
     <div className="form-group">
       <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number:</label>
       <input
-        type="text"
+        type="number"
         id="phone"
         name="phone"
         value={formData.phone}
